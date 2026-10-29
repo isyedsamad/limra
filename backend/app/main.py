@@ -5,13 +5,10 @@ from backend.app.api.routes import analytics, data_quality, forecasts, generatio
 app = FastAPI(title="EnergyBoard API", version="1.0.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
-app.include_router(health.router, prefix="/api", tags=["health"])
-app.include_router(overview.router, prefix="/api", tags=["overview"])
-app.include_router(generation.router, prefix="/api", tags=["generation"])
-app.include_router(forecasts.router, prefix="/api", tags=["forecasts"])
-app.include_router(analytics.router, prefix="/api", tags=["analytics"])
-app.include_router(data_quality.router, prefix="/api", tags=["data-quality"])
-app.include_router(procurement.router, prefix="/api", tags=["procurement"])
+routers = [health.router, overview.router, generation.router, forecasts.router, analytics.router, data_quality.router, procurement.router]
+for prefix in ["/api", ""]:
+    for r in routers:
+        app.include_router(r, prefix=prefix)
 
 if __name__ == "__main__":
     import uvicorn
