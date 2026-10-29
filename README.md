@@ -11,8 +11,8 @@ EnergyBoard is an enterprise-grade analytics dashboard designed for UK wholesale
 
 ## 1. Live Deployment & Video Demo Links
 
-- **Live Web Application (Vercel)**: [https://energyboard.vercel.app](https://energyboard.vercel.app) *(or your deployed Vercel link)*
-- **Live Backend API & Swagger Docs (Render/Heroku)**: [https://energyboard-backend.onrender.com/docs](https://energyboard-backend.onrender.com/docs)
+- **Live Web Application (Vercel)**: [https://limraapp.vercel.app/](https://limraapp.vercel.app/)
+- **Live Backend API & Swagger Docs (Render)**: [https://limra-backend.onrender.com/docs](https://limra-backend.onrender.com/docs) *(Base API: [https://limra-backend.onrender.com/](https://limra-backend.onrender.com/))*
 - **Unlisted Video Walkthrough (YouTube)**: [https://youtu.be/sample-video-link](https://youtu.be/sample-video-link)
   - **Part 1 (0:00 - 4:45)**: Client Pitch & Product Walkthrough (Wholesale Procurement Context, Day-Ahead Forecast Evaluation, Quantified Error Buffering).
   - **Part 2 (4:45 - 9:30)**: Technical Architecture & Review (FastAPI Service Layer, Timezone-Aware Look-Ahead Cutoff Engine, React/Vite UI Architecture, Test Suite).
