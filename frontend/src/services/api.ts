@@ -1,6 +1,7 @@
 import { DataQualityData, GenerationResponse, HealthData, OverviewData, ProcurementResponse, VintagesResponse } from "@/types"
 
-const BASE_URL = "/api"
+const API_HOST = import.meta.env.VITE_API_BASE_URL || ""
+const BASE_URL = API_HOST ? (API_HOST.endsWith("/api") ? API_HOST : `${API_HOST}/api`) : "/api"
 async function fetchJson<T>(url: string): Promise<T> {
   const res = await fetch(url)
   if (!res.ok) {
