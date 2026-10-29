@@ -6,7 +6,7 @@ export function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("light")
   useEffect(() => {
     const saved = localStorage.getItem("energyboard-theme") as "light" | "dark" | null
-    const initial = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    const initial = saved || "light"
     setTheme(initial)
     if (initial === "dark") {
       document.documentElement.classList.add("dark")
