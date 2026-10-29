@@ -29,6 +29,7 @@ energyboard/
 ├── docker-compose.yml              # Multi-container orchestration (FastAPI backend + Vite/Nginx frontend)
 ├── README.md                       # Comprehensive project documentation, run guides, and disclosures
 ├── render.yaml                     # Cloud deployment configuration for Render web service
+├── vercel.json                     # Vercel deployment configuration set to India (bom1) region
 ├── backend/                        # Python FastAPI backend service
 │   ├── Dockerfile                  # Container specification for Python 3.12 runtime
 │   ├── requirements.txt            # Python dependencies (fastapi, uvicorn, pydantic, httpx, pytz, pytest)
